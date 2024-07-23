@@ -1,0 +1,44 @@
+* {
+    font-family: "Noto Sans", "Lato", 'Times New Roman', Times, serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato", "Noto Sans", 'Times New Roman', Times, serif;
+}
+
+button {
+    padding: 0.5em;
+    margin: 0.5em;
+    background-color: white;
+    box-shadow: 0.15em 0.15em;
+}
+
+button:hover {
+    box-shadow: none;
+}
+
+.editNodeModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: rgb(212, 212, 212);
+    box-shadow: 0.15em 0.15em;
+    z-index: 1000;   /* Higher z-index will appear on-top of elements with a lower index.*/
+}
+
+.editNodeModal h2 {
+    margin-top: 0;
+}
+
+.editNodeModal label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.editNodeModal input {
+    display: block;
+    margin-top: 5px;
+    padding: 0.15em;
+}

@@ -1,0 +1,45 @@
+* {
+    font-family: "Noto Sans", "Lato", 'Times New Roman', Times, serif;
+}
+
+.custom_node {
+    border: solid 0.15em black;
+}
+
+.custom_node_header {
+    display: grid;
+    text-align: center;
+    border: solid 0.15em;
+    padding: 0.5em 1em;
+}
+
+.custom_node_title {
+    font-weight: bold;
+}
+
+.custom_node_text {
+    position: relative; 
+    display: grid;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em 1em;
+}
+
+.custom_node_primaryKey {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.custom_node_primaryKey .react-flow__handle {
+    position: absolute;
+}
+
+#primaryKey-target {
+    left: -10px;
+}
+
+#primaryKey-source {
+    right: 10px;
+}
