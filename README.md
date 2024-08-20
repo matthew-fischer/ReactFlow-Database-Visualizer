@@ -6,5 +6,5 @@
 - I built this project to have more practice with React.js and with the ReactFlow library.
 ---
 To run:
-- Install all dependencies.
-- Run the react application on a local host. "npm run dev".
+`npm install`
+`npm run dev`
