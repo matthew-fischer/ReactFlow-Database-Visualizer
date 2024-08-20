@@ -12,3 +12,5 @@ To run:
 Followed by
 
 `npm run dev`
+
+![Screenshot 2024-08-19 at 7 53 49 PM](https://github.com/user-attachments/assets/835359e7-41eb-49ee-819c-6edc49a6193b)
