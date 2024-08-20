@@ -15,4 +15,4 @@ Followed by
 
 ## Image of React Application:
 
-![Screenshot 2024-08-19 at 7 53 49 PM](https://github.com/user-attachments/assets/835359e7-41eb-49ee-819c-6edc49a6193b)
+![Screenshot 2024-08-19 at 7 58 32 PM](https://github.com/user-attachments/assets/7a6fd35f-043c-4684-a5b2-e17948df24fa)
