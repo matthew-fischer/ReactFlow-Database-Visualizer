@@ -9,6 +9,6 @@ To run:
 
 `npm install`
 
-followed by
+Followed by
 
 `npm run dev`
