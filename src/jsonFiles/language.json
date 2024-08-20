@@ -1,0 +1,108 @@
+{
+    "tables": [
+        {
+            "id": "1",
+            "type": "Database1",
+            "data": {
+                "label": {
+                    "title": "Film",
+                    "primaryKey": {
+                        "name": "film_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "title",
+                            "type": "text"
+                        }},
+                        {"2": {
+                            "name": "description",
+                            "type": "text"
+                        }},
+                        {"3": {
+                            "name": "release_year",
+                            "type": "date"
+                        }},
+                        {"4": {
+                            "name": "language_id",
+                            "type": "integer"
+                        }},
+                        {"5": {
+                            "name": "rental_duration",
+                            "type": "integer"
+                        }},
+                        {"6": {
+                            "name": "rental_rate",
+                            "type": "integer"
+                        }},
+                        {"7": {
+                            "name": "length",
+                            "type": "integer"
+                        }},
+                        {"8": {
+                            "name": "replacement_cost",
+                            "type": "integer"
+                        }},
+                        {"9": {
+                            "name": "rating",
+                            "type": "integer"
+                        }},
+                        {"10": {
+                            "name": "last_update",
+                            "type": "date"
+                        }},
+                        {"11": {
+                            "name": "special_feature",
+                            "type": "text"
+                        }},
+                        {"12": {
+                            "name": "fulltext",
+                            "type": "text"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "600",
+                "y": "175"
+            }
+        },
+        {
+            "id": "2",
+            "type": "Database1",
+            "data": {
+                "label": {
+                    "title": "Language",
+                    "primaryKey": {
+                        "name": "language_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "name",
+                            "type": "text"
+                        }},
+                        {"2": {
+                            "name": "last_update",
+                            "type": "date"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "300",
+                "y": "300"
+            }
+        }
+    ],
+    "edges": [
+        {
+            "id": "e2-1Target4",
+            "source": "2",
+            "target": "1",
+            "targetHandle": "Target4",
+            "type": "One-to-Many",
+            "animated": true
+        }
+    ]
+}

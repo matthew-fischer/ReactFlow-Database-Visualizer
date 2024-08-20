@@ -1,0 +1,72 @@
+{
+    "tables": [
+        {
+            "id": "1",
+            "type": "Database1",
+            "data": {
+                "label": {
+                    "title": "Category",
+                    "primaryKey": {
+                        "name": "category_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "name",
+                            "type": "text"
+                        }},
+                        {"2": {
+                            "name": "last_update",
+                            "type": "date"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "250",
+                "y": "250"
+            }
+        },
+        {
+            "id": "2",
+            "type": "Database1",
+            "data": {
+                "label": {
+                    "title": "Film Category",
+                    "primaryKey": {
+                        "name": "{film_id, category_id}",
+                        "type": "{integer, integer}"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "film_id",
+                            "type": "integer"
+                        }},
+                        {"2": {
+                            "name": "category_id",
+                            "type": "integer"
+                        }},
+                        {"3": {
+                            "name": "last_update",
+                            "type": "date"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "650",
+                "y": "250"
+            }
+        }
+    ],
+    "edges": [
+        {
+            "id": "e1-2Target2",
+            "source": "1",
+            "target": "2",
+            "targetHandle": "Target2",
+            "type": "One-to-Many",
+            "animated": true
+        }
+    ]
+}

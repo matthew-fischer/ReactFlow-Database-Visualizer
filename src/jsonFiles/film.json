@@ -1,0 +1,225 @@
+{
+    "tables": [
+        {
+            "id": "1",
+            "type": "Database1",
+            "data": {
+                "label": {
+                    "title": "Film Category",
+                    "primaryKey": {
+                        "name": "{film_id, category_id}",
+                        "type": "{integer, integer}"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "film_id",
+                            "type": "integer"
+                        }},
+                        {"2": {
+                            "name": "category_id",
+                            "type": "integer"
+                        }},
+                        {"3": {
+                            "name": "last_update",
+                            "type": "date"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "750",
+                "y": "30"
+            }
+        },
+        {
+            "id": "2",
+            "type": "Database1",
+            "data": {
+                "label": {
+                    "title": "Film",
+                    "primaryKey": {
+                        "name": "film_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "title",
+                            "type": "text"
+                        }},
+                        {"2": {
+                            "name": "description",
+                            "type": "text"
+                        }},
+                        {"3": {
+                            "name": "release_year",
+                            "type": "date"
+                        }},
+                        {"4": {
+                            "name": "language_id",
+                            "type": "integer"
+                        }},
+                        {"5": {
+                            "name": "rental_duration",
+                            "type": "integer"
+                        }},
+                        {"6": {
+                            "name": "rental_rate",
+                            "type": "integer"
+                        }},
+                        {"7": {
+                            "name": "length",
+                            "type": "integer"
+                        }},
+                        {"8": {
+                            "name": "replacement_cost",
+                            "type": "integer"
+                        }},
+                        {"9": {
+                            "name": "rating",
+                            "type": "integer"
+                        }},
+                        {"10": {
+                            "name": "last_update",
+                            "type": "date"
+                        }},
+                        {"11": {
+                            "name": "special_feature",
+                            "type": "text"
+                        }},
+                        {"12": {
+                            "name": "fulltext",
+                            "type": "text"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "260",
+                "y": "70"
+            }
+        },
+        {
+            "id": "3",
+            "type": "Database1",
+            "data": {
+                "label": {
+                    "title": "Language",
+                    "primaryKey": {
+                        "name": "language_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "name",
+                            "type": "text"
+                        }},
+                        {"2": {
+                            "name": "last_update",
+                            "type": "date"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "10",
+                "y": "300"
+            }
+        },
+        {
+            "id": "4",
+            "type": "Database2",
+            "data": {
+                "label": {
+                    "title": "Film Actor",
+                    "primaryKey": {
+                        "name": "{actor_id, film_id}",
+                        "type": "{integer, integer}"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "actor_id",
+                            "type": "integer"
+                        }},
+                        {"2": {
+                            "name": "film_id",
+                            "type": "integer"
+                        }},
+                        {"3": {
+                            "name": "last_update",
+                            "type": "date"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "750",
+                "y": "300"
+            }
+        },
+        {
+            "id": "5",
+            "type": "Database1",
+            "data": {
+                "label": {
+                    "title": "Inventory",
+                    "primaryKey": {
+                        "name": "inventory_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "film_id",
+                            "type": "integer"
+                        }},
+                        {"2": {
+                            "name": "store_id",
+                            "type": "integer"
+                        }},
+                        {"3": {
+                            "name": "last_update",
+                            "type": "date"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "503",
+                "y": "500"
+            }
+        }
+    ],
+    "edges": [
+        {
+            "id": "e2-5Target1",
+            "source": "2",
+            "target": "5",
+            "targetHandle": "Target1",
+            "type": "One-to-Many",
+            "animated": true
+        },
+        {
+            "id": "e2-4Target2",
+            "source": "2",
+            "target": "4",
+            "targetHandle": "Target2",
+            "type": "One-to-Many",
+            "animated": true
+        },
+        {
+            "id": "e2-1Target1",
+            "source": "2",
+            "target": "1",
+            "targetHandle": "Target1",
+            "type": "One-to-Many",
+            "animated": true
+        },
+        {
+            "id": "e3-2Target4",
+            "source": "3",
+            "target": "2",
+            "targetHandle": "Target4",
+            "type": "One-to-Many",
+            "animated": true
+        }
+    ]
+}

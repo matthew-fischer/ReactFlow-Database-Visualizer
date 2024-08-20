@@ -1,0 +1,163 @@
+{
+    "tables": [
+        {
+            "id": "1",
+            "type": "Database1",
+            "data": {
+                "label": {
+                    "title": "Film",
+                    "primaryKey": {
+                        "name": "film_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "title",
+                            "type": "text"
+                        }},
+                        {"2": {
+                            "name": "description",
+                            "type": "text"
+                        }},
+                        {"3": {
+                            "name": "release_year",
+                            "type": "date"
+                        }},
+                        {"4": {
+                            "name": "language_id",
+                            "type": "integer"
+                        }},
+                        {"5": {
+                            "name": "rental_duration",
+                            "type": "integer"
+                        }},
+                        {"6": {
+                            "name": "rental_rate",
+                            "type": "integer"
+                        }},
+                        {"7": {
+                            "name": "length",
+                            "type": "integer"
+                        }},
+                        {"8": {
+                            "name": "replacement_cost",
+                            "type": "integer"
+                        }},
+                        {"9": {
+                            "name": "rating",
+                            "type": "integer"
+                        }},
+                        {"10": {
+                            "name": "last_update",
+                            "type": "date"
+                        }},
+                        {"11": {
+                            "name": "special_feature",
+                            "type": "text"
+                        }},
+                        {"12": {
+                            "name": "fulltext",
+                            "type": "text"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "250",
+                "y": "100"
+            }
+        },
+        {
+            "id": "2",
+            "type": "Database1",
+            "data": {
+                "label": {
+                    "title": "Rental",
+                    "primaryKey": {
+                        "name": "rental_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "rental_date",
+                            "type": "date"
+                        }},
+                        {"2": {
+                            "name": "inventory_id",
+                            "type": "integer"
+                        }},
+                        {"3": {
+                            "name": "customer_id",
+                            "type": "integer"
+                        }},
+                        {"4": {
+                            "name": "return_date",
+                            "type": "date"
+                        }},
+                        {"5": {
+                            "name": "staff_id",
+                            "type": "integer"
+                        }},
+                        {"6": {
+                            "name": "last_update",
+                            "type": "date"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "850",
+                "y": "100"
+            }
+        },
+        {
+            "id": "3",
+            "type": "Database1",
+            "data": {
+                "label": {
+                    "title": "Inventory",
+                    "primaryKey": {
+                        "name": "inventory_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "film_id",
+                            "type": "integer"
+                        }},
+                        {"2": {
+                            "name": "store_id",
+                            "type": "integer"
+                        }},
+                        {"3": {
+                            "name": "last_update",
+                            "type": "date"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "550",
+                "y": "100"
+            }
+        }
+    ],
+    "edges": [
+        {
+            "id": "e3-2Target2",
+            "source": "3",
+            "target": "2",
+            "targetHandle": "Target2",
+            "type": "One-to-Many",
+            "animated": true
+        },
+        {
+            "id": "e1-3Target1",
+            "source": "1",
+            "target": "3",
+            "targetHandle": "Target1",
+            "type": "One-to-Many",
+            "animated": true
+        }
+    ]
+}

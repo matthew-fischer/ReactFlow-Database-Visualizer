@@ -1,5 +1,7 @@
 * {
     font-family: "Noto Sans", "Lato", 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -11,34 +13,113 @@ button {
     margin: 0.5em;
     background-color: white;
     box-shadow: 0.15em 0.15em;
+    border-radius: 3%;
 }
 
 button:hover {
     box-shadow: none;
 }
 
-.editNodeModal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 2em;
-    background: rgb(212, 212, 212);
-    box-shadow: 0.15em 0.15em;
-    z-index: 1000;   /* Higher z-index will appear on-top of elements with a lower index.*/
+.buttons {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    border-radius: 3%;
 }
 
-.editNodeModal h2 {
-    margin-top: 0;
-}
-
-.editNodeModal label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-.editNodeModal input {
-    display: block;
-    margin-top: 5px;
+.custom_panel {
+    margin: 0px;
     padding: 0.15em;
+    background-color: rgb(223, 223, 223);
+    border-right: solid 0.15em black;
+    border-bottom: solid 0.15em black;
+}
+
+.custom_controls {
+    margin: 0px;
+    background-color: #e0dede;
+    border-right: solid 0.15em black;
+    border-top: solid 0.15em black;
+    border-radius: 3%;
+}
+
+.custom_minimap {
+    margin: 0px;
+    border-left: solid 0.15em black;
+    border-top: solid 0.15em black;
+}
+
+.reactflow_container {
+    position: absolute;
+    width: 80%;
+    height: 99.3vh;
+    right: 0;
+    top: 0;
+    border: solid, 0.15em black;
+}
+
+.sidebar {
+    width: 19.5%;
+    height: 99.3vh;
+    border: solid 0.15em black;
+    overflow-y: scroll;
+    overflow-x: wrap;
+    background-color: #b1aeae ;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+    border-bottom: solid 0.15em black;
+    border-right: solid 0.15em black;
+    color: rgb(159, 55, 55);
+}
+
+.search_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3em;
+    border-right: solid 0.15em black;
+}
+
+.search_container > input {
+    position: relative;
+    padding: 0.5em;
+    border: solid 0.1em #e0dede;
+    border-radius: 5%;
+    margin-left: 0.3em;
+    color: black;
+    background-color: #e0dede;
+}
+
+.clearbutton {
+    position: absolute;
+    left: 14%;
+    border: none;
+    border-radius: 25%;
+    padding: 0.4em;
+    box-shadow: none;
+    background-color: #e0dede;
+}
+
+.clearbutton:hover {
+    background-color: #b1aeae;
+}
+
+.category-items {
+    padding: 1em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.category-items > li {
+    margin: 0.3em;
+    background-color: rgb(193, 187, 188);
+    border-radius: 5%;
+    padding: 0.2em;
 }

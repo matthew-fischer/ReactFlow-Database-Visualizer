@@ -1,0 +1,127 @@
+{
+    "tables": [
+        {
+            "id": "1",
+            "type": "Database3",
+            "data": {
+                "label": {
+                    "title": "Address",
+                    "primaryKey": {
+                        "name": "address_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "address",
+                            "type": "text"
+                        }},
+                        {"2": {
+                            "name": "address2",
+                            "type": "text"
+                        }},
+                        {"3": {
+                            "name": "district",
+                            "type": "text"
+                        }},
+                        {"4": {
+                            "name": "city_id",
+                            "type": "integer"
+                        }},
+                        {"5": {
+                            "name": "postal_code",
+                            "type": "text"
+                        }},
+                        {"6": {
+                            "name": "phone",
+                            "type": "text"
+                        }},
+                        {"7": {
+                            "name": "last_update",
+                            "type": "date"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "800",
+                "y": "250"
+            }
+        },
+        {
+            "id": "2",
+            "type": "Database3",
+            "data": {
+                "label": {
+                    "title": "City",
+                    "primaryKey": {
+                        "name": "city_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "city",
+                            "type": "text"
+                        }},
+                        {"2": {
+                            "name": "country_id",
+                            "type": "integer"
+                        }},
+                        {"3": {
+                            "name": "last_update",
+                            "type": "date"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "500",
+                "y": "250"
+            }
+        },
+        {
+            "id": "3",
+            "type": "Database3",
+            "data": {
+                "label": {
+                    "title": "Country",
+                    "primaryKey": {
+                        "name": "country_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "country",
+                            "type": "text"
+                        }},
+                        {"2": {
+                            "name": "last_update",
+                            "type": "date"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "200",
+                "y": "250"
+            }
+        }
+    ],
+    "edges": [
+        {
+            "id": "e2-1Target4",
+            "source": "2",
+            "target": "1",
+            "targetHandle": "Target4",
+            "type": "One-to-Many",
+            "animated": true
+        },
+        {
+            "id": "e3-2Target2",
+            "source": "3",
+            "target": "2",
+            "targetHandle": "Target2",
+            "type": "One-to-Many",
+            "animated": true
+        }
+    ]
+}

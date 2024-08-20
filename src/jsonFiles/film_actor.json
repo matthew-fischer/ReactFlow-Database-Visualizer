@@ -1,0 +1,151 @@
+{
+    "tables": [
+        {
+            "id": "1",
+            "type": "Database1",
+            "data": {
+                "label": {
+                    "title": "Film",
+                    "primaryKey": {
+                        "name": "film_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "title",
+                            "type": "text"
+                        }},
+                        {"2": {
+                            "name": "description",
+                            "type": "text"
+                        }},
+                        {"3": {
+                            "name": "release_year",
+                            "type": "date"
+                        }},
+                        {"4": {
+                            "name": "language_id",
+                            "type": "integer"
+                        }},
+                        {"5": {
+                            "name": "rental_duration",
+                            "type": "integer"
+                        }},
+                        {"6": {
+                            "name": "rental_rate",
+                            "type": "integer"
+                        }},
+                        {"7": {
+                            "name": "length",
+                            "type": "integer"
+                        }},
+                        {"8": {
+                            "name": "replacement_cost",
+                            "type": "integer"
+                        }},
+                        {"9": {
+                            "name": "rating",
+                            "type": "integer"
+                        }},
+                        {"10": {
+                            "name": "last_update",
+                            "type": "date"
+                        }},
+                        {"11": {
+                            "name": "special_feature",
+                            "type": "text"
+                        }},
+                        {"12": {
+                            "name": "fulltext",
+                            "type": "text"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "200",
+                "y": "250"
+            }
+        },
+        {
+            "id": "2",
+            "type": "Database2",
+            "data": {
+                "label": {
+                    "title": "Film Actor",
+                    "primaryKey": {
+                        "name": "{actor_id, film_id}",
+                        "type": "{integer, integer}"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "actor_id",
+                            "type": "integer"
+                        }},
+                        {"2": {
+                            "name": "film_id",
+                            "type": "integer"
+                        }},
+                        {"3": {
+                            "name": "last_update",
+                            "type": "date"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "750",
+                "y": "250"
+            }
+        },
+        {
+            "id": "3",
+            "type": "Database1",
+            "data": {
+                "label": {
+                    "title": "Actor",
+                    "primaryKey": {
+                        "name": "actor_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "first_name",
+                            "type":"text"
+                        }},
+                        {"2": {
+                            "name": "last_name",
+                            "type": "text"
+                        }},
+                        {"3": {
+                            "name": "last_update",
+                            "type": "date"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "500",
+                "y": "50"
+            }
+        }
+    ],
+    "edges": [
+        {
+            "id": "e3-2Target1",
+            "source": "3",
+            "target": "2",
+            "targetHandle": "Target1",
+            "type": "One-to-Many",
+            "animated": true
+        },
+        {
+            "id": "e1-2Target2",
+            "source": "1",
+            "target": "2",
+            "targetHandle": "Target2",
+            "type": "One-to-Many",
+            "animated": true
+        }
+    ]
+}

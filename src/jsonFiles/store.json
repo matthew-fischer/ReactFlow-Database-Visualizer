@@ -1,0 +1,159 @@
+{
+    "tables": [
+        {
+            "id": "1",
+            "type": "Database2",
+            "data": {
+                "label": {
+                    "title": "Staff",
+                    "primaryKey": {
+                        "name": "staff_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "first_name",
+                            "type": "text"
+                        }},
+                        {"2": {
+                            "name": "last_name",
+                            "type": "text"
+                        }},
+                        {"3": {
+                            "name": "address_id",
+                            "type": "integer"
+                        }},
+                        {"4": {
+                            "name": "email",
+                            "type": "email"
+                        }},
+                        {"5": {
+                            "name": "store_id",
+                            "type": "integer"
+                        }},
+                        {"6": {
+                            "name": "active",
+                            "type": "boolean"
+                        }},
+                        {"7": {
+                            "name": "username",
+                            "type": "text"
+                        }},
+                        {"8": {
+                            "name": "password",
+                            "type": "text"
+                        }},
+                        {"9": {
+                            "name": "last_update",
+                            "type": "date"
+                        }},
+                        {"10": {
+                            "name": "picture",
+                            "type": "text"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "850",
+                "y": "200"
+            }
+        },
+        {
+            "id": "2",
+            "type": "Database3",
+            "data": {
+                "label": {
+                    "title": "Address",
+                    "primaryKey": {
+                        "name": "address_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "address",
+                            "type": "text"
+                        }},
+                        {"2": {
+                            "name": "address2",
+                            "type": "text"
+                        }},
+                        {"3": {
+                            "name": "district",
+                            "type": "text"
+                        }},
+                        {"4": {
+                            "name": "city_id",
+                            "type": "integer"
+                        }},
+                        {"5": {
+                            "name": "postal_code",
+                            "type": "text"
+                        }},
+                        {"6": {
+                            "name": "phone",
+                            "type": "text"
+                        }},
+                        {"7": {
+                            "name": "last_update",
+                            "type": "date"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "300",
+                "y": "200"
+            }
+        },
+        {
+            "id": "3",
+            "type": "Database3",
+            "data": {
+                "label": {
+                    "title": "Store",
+                    "primaryKey": {
+                        "name": "store_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "manager_staff_id",
+                            "type": "integer"
+                        }},
+                        {"2": {
+                            "name": "address_id",
+                            "type": "integer"
+                        }},
+                        {"3": {
+                            "name": "last_update",
+                            "type": "date"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "550",
+                "y": "250"
+            }
+        }
+    ],
+    "edges": [
+        {
+            "id": "e3-1Target5",
+            "source": "3",
+            "target": "1",
+            "targetHandle": "Target5",
+            "type": "One-to-Many",
+            "animated": true
+        },
+        {
+            "id": "e2-3Target2",
+            "source": "2",
+            "target": "3",
+            "targetHandle": "Target2",
+            "type": "One-to-One",
+            "animated": true
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+{
+    "tables": [
+        {
+            "id": "1",
+            "type": "Database2",
+            "data": {
+                "label": {
+                    "title": "Film Actor",
+                    "primaryKey": {
+                        "name": "{actor_id, film_id}",
+                        "type": "{integer, integer}"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "actor_id",
+                            "type": "integer"
+                        }},
+                        {"2": {
+                            "name": "film_id",
+                            "type": "integer"
+                        }},
+                        {"3": {
+                            "name": "last_update",
+                            "type": "date"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "650",
+                "y": "250"
+            }
+        },
+        {
+            "id": "2",
+            "type": "Database1",
+            "data": {
+                "label": {
+                    "title": "Actor",
+                    "primaryKey": {
+                        "name": "actor_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "first_name",
+                            "type":"text"
+                        }},
+                        {"2": {
+                            "name": "last_name",
+                            "type": "text"
+                        }},
+                        {"3": {
+                            "name": "last_update",
+                            "type": "date"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "250",
+                "y": "250"
+            }
+        }
+    ],
+    "edges": [
+        {
+            "id": "e2-1Target1",
+            "source": "2",
+            "target": "1",
+            "targetHandle": "Target1",
+            "type": "One-to-Many",
+            "animated": true
+        }
+    ]
+}

@@ -1,0 +1,72 @@
+{
+    "tables": [
+        {
+            "id": "1",
+            "type": "Database3",
+            "data": {
+                "label": {
+                    "title": "City",
+                    "primaryKey": {
+                        "name": "city_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "city",
+                            "type": "text"
+                        }},
+                        {"2": {
+                            "name": "country_id",
+                            "type": "integer"
+                        }},
+                        {"3": {
+                            "name": "last_update",
+                            "type": "date"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "650",
+                "y": "250"
+            }
+        },
+        {
+            "id": "2",
+            "type": "Database3",
+            "data": {
+                "label": {
+                    "title": "Country",
+                    "primaryKey": {
+                        "name": "country_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "country",
+                            "type": "text"
+                        }},
+                        {"2": {
+                            "name": "last_update",
+                            "type": "date"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "250",
+                "y": "250"
+            }
+        }
+    ],
+    "edges": [
+        {
+            "id": "e2-1Target2",
+            "source": "2",
+            "target": "1",
+            "targetHandle": "Target2",
+            "type": "One-to-Many",
+            "animated": true
+        }
+    ]
+}

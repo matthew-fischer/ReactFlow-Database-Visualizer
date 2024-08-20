@@ -1,0 +1,265 @@
+{
+    "tables": [
+        {
+            "id": "1",
+            "type": "Database1",
+            "data": {
+                "label": {
+                    "title": "Rental",
+                    "primaryKey": {
+                        "name": "rental_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "rental_date",
+                            "type": "date"
+                        }},
+                        {"2": {
+                            "name": "inventory_id",
+                            "type": "integer"
+                        }},
+                        {"3": {
+                            "name": "customer_id",
+                            "type": "integer"
+                        }},
+                        {"4": {
+                            "name": "return_date",
+                            "type": "date"
+                        }},
+                        {"5": {
+                            "name": "staff_id",
+                            "type": "integer"
+                        }},
+                        {"6": {
+                            "name": "last_update",
+                            "type": "date"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "700",
+                "y": "100"
+            }
+        },
+        {
+            "id": "2",
+            "type": "Database1",
+            "data": {
+                "label": {
+                    "title": "Inventory",
+                    "primaryKey": {
+                        "name": "inventory_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "film_id",
+                            "type": "integer"
+                        }},
+                        {"2": {
+                            "name": "store_id",
+                            "type": "integer"
+                        }},
+                        {"3": {
+                            "name": "last_update",
+                            "type": "date"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "400",
+                "y": "30"
+            }
+        },
+        {
+            "id": "3",
+            "type": "Database1",
+            "data": {
+                "label": {
+                    "title": "Payment",
+                    "primaryKey": {
+                        "name": "payment_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "customer_id",
+                            "type": "integer"
+                        }},
+                        {"2": {
+                            "name": "staff_id",
+                            "type": "integer"
+                        }},
+                        {"3": {
+                            "name": "rental_id",
+                            "type": "integer"
+                        }},
+                        {"4": {
+                            "name": "amount",
+                            "type": "float"
+                        }},
+                        {"5": {
+                            "name": "payment_date",
+                            "type": "date"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "1000",
+                "y": "200"
+            }
+        },
+        {
+            "id": "4",
+            "type": "Database2",
+            "data": {
+                "label": {
+                    "title": "Staff",
+                    "primaryKey": {
+                        "name": "staff_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "first_name",
+                            "type": "text"
+                        }},
+                        {"2": {
+                            "name": "last_name",
+                            "type": "text"
+                        }},
+                        {"3": {
+                            "name": "address_id",
+                            "type": "integer"
+                        }},
+                        {"4": {
+                            "name": "email",
+                            "type": "email"
+                        }},
+                        {"5": {
+                            "name": "store_id",
+                            "type": "integer"
+                        }},
+                        {"6": {
+                            "name": "active",
+                            "type": "boolean"
+                        }},
+                        {"7": {
+                            "name": "username",
+                            "type": "text"
+                        }},
+                        {"8": {
+                            "name": "password",
+                            "type": "text"
+                        }},
+                        {"9": {
+                            "name": "last_update",
+                            "type": "date"
+                        }},
+                        {"10": {
+                            "name": "picture",
+                            "type": "text"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "450",
+                "y": "300"
+            }
+        },
+        {
+            "id": "5",
+            "type": "Database2",
+            "data": {
+                "label": {
+                    "title": "Customer",
+                    "primaryKey": {
+                        "name": "customer_id",
+                        "type": "integer"
+                    },
+                    "keys": [
+                        {"1": {
+                            "name": "store_id",
+                            "type": "integer"
+                        }},
+                        {"2": {
+                            "name": "first_name",
+                            "type": "text"
+                        }},
+                        {"3": {
+                            "name": "last_name",
+                            "type": "text"
+                        }},
+                        {"4": {
+                            "name": "email",
+                            "type": "email"
+                        }},
+                        {"5": {
+                            "name": "address_id",
+                            "type": "integer"
+                        }},
+                        {"6": {
+                            "name": "activebool",
+                            "type": "boolean"
+                        }},
+                        {"7": {
+                            "name": "create_date",
+                            "type": "date"
+                        }},
+                        {"8": {
+                            "name": "last_update",
+                            "type": "date"
+                        }},
+                        {"9": {
+                            "name": "active",
+                            "type": "boolean"
+                        }}
+                    ]
+                }
+            },
+            "position": {
+                "x": "100",
+                "y": "200"
+            }
+        }
+    ],
+    "edges": [
+        {
+            "id": "e1-3Target3",
+            "source": "1",
+            "target": "3",
+            "targetHandle": "Target3",
+            "type": "One-to-Many",
+            "animated": true
+        },
+        {
+            "id": "e2-1Target2",
+            "source": "2",
+            "target": "1",
+            "targetHandle": "Target2",
+            "type": "One-to-Many",
+            "animated": true
+        },
+        {
+            "id": "e4-1Target5",
+            "source": "4",
+            "target": "1",
+            "targetHandle": "Target5",
+            "type": "One-to-Many",
+            "animated": true
+        },
+        {
+            "id": "e5-1Target3",
+            "source": "5",
+            "target": "1",
+            "targetHandle": "Target3",
+            "type": "One-to-Many",
+            "animated": true
+        }
+    ]
+}
