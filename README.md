@@ -5,12 +5,14 @@
 - Here I am using static JSON files to store database information.
 - I built this project to have more practice with React.js and with the ReactFlow library.
 ---
-To run:
+## To run:
 
 `npm install`
 
 Followed by
 
 `npm run dev`
+
+## Image of React Application:
 
 ![Screenshot 2024-08-19 at 7 53 49 PM](https://github.com/user-attachments/assets/835359e7-41eb-49ee-819c-6edc49a6193b)
