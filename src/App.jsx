@@ -95,9 +95,9 @@ function App({prop}) {
                     <Background color='#ccc' variant={variant} /> 
                     <Controls className="custom_controls" position='bottom-left'/>
                     <MiniMap className="custom_minimap" nodeColor={(n) => {
-                        if (n.type === "Database1") return colors.one_color;
-                        else if (n.type === "Database2") return colors.two_color;
-                        else if (n.type === "Database3") return colors.three_color;
+                        if (n.type === "Database1") return colors.Database1;
+                        else if (n.type === "Database2") return colors.Database2;
+                        else if (n.type === "Database3") return colors.Database3;
                         else return colors.OTHER;
                         }} 
                         nodeStrokeWidth={3}
