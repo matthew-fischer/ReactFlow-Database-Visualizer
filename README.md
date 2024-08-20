@@ -6,6 +6,7 @@
 - I built this project to have more practice with React.js and with the ReactFlow library.
 ---
 To run:
+
 `npm install`
 
 followed by
